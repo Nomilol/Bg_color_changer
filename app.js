@@ -18,7 +18,11 @@ console.log('start');
 			var greenValue = $('#green').val();
 			var blueValue = $('#blue').val();
 			$('body').css('backgroundColor','rgb('+redValue+', '+greenValue+','+blueValue+')');
-			console.log(redValue, greenValue, blueValue);
+			//console.log(redValue, greenValue, blueValue);
+			if(redValue === 0 && greenValue == 0 && blueValue == 0){
+				console.log('bonjour');
+				$('body').css('color', 'white');
+			}
 			app.valueInput();
 
 		},
@@ -44,9 +48,7 @@ console.log('start');
 				$(this).next().text($set);
 			});
 		},
-		changeColor : function(){
-
-		}
+		
 	}
 
 
